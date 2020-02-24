@@ -1,11 +1,23 @@
+
+
 a{
     text-decoration: none;
+    display: inline-grid;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 30px;
+}
+
+a:hover{
+    color: rgb(102, 111, 243) !important;
+    
 }
 
 a:visited {
     color: white;
   }
 
-h{
+h3{
     color:white;
 }

@@ -18,7 +18,10 @@ export default class App extends Component {
       <Router>
         <div>
         <Header/>
-        <Link to ="/"><h4>Shop</h4></Link>
+        <Link to ="/"><h4>ADMIN</h4></Link>
+        <Link to ="/"><h4>SHOP</h4></Link>
+        <Link to ="/about"><h4>ABOUT</h4></Link>
+        <hr></hr>
           <Switch>
             <Route exact path='/' component={Store}/>
             <Route exact path='/about' component={About}/>
