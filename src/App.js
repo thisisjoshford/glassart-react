@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 //import Admin from './Admin.js'
-import Navigation from './Navigation.js';
+import Header from './Header.js';
 import Store from './Store.js';
 import About from './About.js';
 import Error from './Error.js';
@@ -16,7 +16,7 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-        <Navigation/>
+        <Header/>
           <Switch>
             <Route exact path='/' component={Store}/>
             <Route exact path='/about' component={About}/>
