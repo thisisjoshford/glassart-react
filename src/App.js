@@ -10,6 +10,7 @@ import Header from './Header.js';
 import Store from './Store.js';
 import About from './About.js';
 import Error from './Error.js';
+import './App.css';
 
 export default class App extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class App extends Component {
       <Router>
         <div>
         <Header/>
+        <Link to ="/"><h4>Shop</h4></Link>
           <Switch>
             <Route exact path='/' component={Store}/>
             <Route exact path='/about' component={About}/>
