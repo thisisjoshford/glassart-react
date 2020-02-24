@@ -11,6 +11,7 @@ import Store from './Store.js';
 import About from './About.js';
 import Error from './Error.js';
 import Admin from './Admin.js';
+import Details from './Details.js';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ export default class App extends Component {
             <Route exact path='/' component={Store}/>
             <Route exact path='/about' component={About}/>
             <Route exact path='/admin' component={Admin}/>
+            <Route exact path="/product/:productId?" component={Details}/>
             <Route component={Error}/>
           </Switch>
         </div>

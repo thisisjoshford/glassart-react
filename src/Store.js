@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GlassItem from './GlassItem.js';
-import data from './data.json';
+// import data from './data.json';
 import { getGlassArt } from './GlassApi.js';
 
 export default class Store extends Component {
