@@ -123,6 +123,9 @@ export default class Admin extends Component {
                 </form>
                 <br></br>
                 <button id="clearButton" onClick={this.handleClear}>CLEAR</button>
+                <br></br>
+                <br></br>
+                <Link to="/admin/create-type">CREATE TYPE</Link>
             </div>
         )
     }

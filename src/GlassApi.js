@@ -25,3 +25,7 @@ export function updateGlassItem(product){
     return request.put('https://cryptic-journey-67632.herokuapp.com/api/products', product)
 
 }
+
+export function createType(type){
+    return request.post('https://cryptic-journey-67632.herokuapp.com/api/types', type)
+}
