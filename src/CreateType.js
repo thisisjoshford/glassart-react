@@ -28,7 +28,7 @@ export default class CreateType extends Component {
             <div>
                <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>ADD AN EVENT</legend>
+                        <legend>ADD A NEW PRODUCT TYPE</legend>
                         <label>NEW TYPE:</label>
                         <input 
                         id="typeInput"
