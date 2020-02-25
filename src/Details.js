@@ -16,7 +16,7 @@ export default class Details extends Component {
             <div>
                 <div id="glassProducts">
                     <h2>{glassItem.product_name}</h2>
-                 <img src={`https://cryptic-journey-67632.herokuapp.com/assets/${glassItem.img_url}`}/>
+                 <img src={glassItem.img_url}/>
                  <li id="description">{glassItem.description}</li>
                  <li id="price">${glassItem.price}</li>
                  {/* <li>{glassItem.in_stock.toString()}</li> */}

@@ -10,7 +10,7 @@ export default class GlassItem extends Component {
         return (
             <div id="glassProducts">
                  <h2>{this.props.glass.product_name}</h2>
-                 <img src={`https://cryptic-journey-67632.herokuapp.com/assets/${this.props.glass.img_url}`}/>
+                 <img src={this.props.glass.img_url}/>
                  {/* <li id="description">{this.props.glass.description}</li> */}
                  <li id="price">${this.props.glass.price}</li>
                  <Link to={`product/${this.props.glass.product_id}`}>Details</Link>
