@@ -15,3 +15,13 @@ export function getTypes(){
 export function insertNewProduct(product){
     return request.post('https://cryptic-journey-67632.herokuapp.com/api/products', product)
 }
+
+export function deleteGlassItem(productId){
+    const URL = `https://cryptic-journey-67632.herokuapp.com/api/product`
+    return request.delete(`${URL}/${productId}`)
+}
+
+export function updateGlassItem(product){
+    return request.put('https://cryptic-journey-67632.herokuapp.com/api/products', product)
+
+}

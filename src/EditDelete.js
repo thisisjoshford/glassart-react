@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { getTypes, insertNewProduct } from './GlassApi'
-import {Link} from 'react-router-dom';
+import { getTypes, getGlassItem, deleteGlassItem, updateGlassItem } from './GlassApi'
 
-import './Admin.css';
 
-export default class Admin extends Component {
+export default class EditDelete extends Component {
     state = {
         types: [],
         in_stock: true,
@@ -32,13 +30,16 @@ export default class Admin extends Component {
     handleQuantity = (event) => {
         this.setState({ quantity: Number(event.target.value)})
     }
-    handleClear = () => {
-        window.location.reload();
+    handleDelete = async () => {
+        await deleteGlassItem(this.props.match.params.productId)
+        alert("Yo! You deleted that shit!  Hope you were sure about that");
+        this.props.history.push('/')
     }
 
-    handleSubmit = async (event) => {
+    handleUpdate = async (event) => {
         event.preventDefault();
         const newGlassItem = {
+            product_id: Number(this.props.match.params.productId),
             product_name: this.state.product_name,
             description: this.state.description,
             price: this.state.price,
@@ -47,19 +48,35 @@ export default class Admin extends Component {
             in_stock: this.state.in_stock,
             quantity: this.state.quantity
         }
-        await insertNewProduct(newGlassItem);
-        // this.props.history.push('/');
+        await updateGlassItem(newGlassItem);
+        alert(`${this.state.product_name} has been updated!`);
+        console.log(newGlassItem)
+        this.props.history.push('/')
+
     }
     async componentDidMount() {
         const types = await getTypes();
         this.setState({types: types.body})
+        const glassItemArray = await getGlassItem(this.props.match.params.productId)
+        const glassItem = glassItemArray.body[0]
+        
+        this.setState({
+            product_id: glassItem.product_id,
+            product_name: glassItem.product_name,
+            description: glassItem.description,
+            price: glassItem.price,
+            img_url: glassItem.img_url,
+            type_id: glassItem.type_id,
+            in_stock: glassItem.in_stock,
+            quantity: glassItem.quantity
+        })
     }
     render() {
 
         return (
             <div>
-                <h2>Enter New Product</h2>
-                <form onSubmit={this.handleSubmit}>
+                <h2>EDIT / DELETE ITEM</h2>
+                <form onSubmit={this.handleUpdate}>
                     <label>
                         Product Name--->
                         <input
@@ -119,10 +136,10 @@ export default class Admin extends Component {
                         </input>
                     </label>
                     <br></br>
-                <button>SUBMIT</button>
+                <button>UPDATE</button>
                 </form>
                 <br></br>
-                <button id="clearButton" onClick={this.handleClear}>CLEAR</button>
+                <button id="clearButton" onClick={this.handleDelete}>DELETE</button>
             </div>
         )
     }
