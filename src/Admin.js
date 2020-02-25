@@ -60,28 +60,28 @@ export default class Admin extends Component {
                 <h2>Enter New Product</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Product Name:
+                        Product Name--->
                         <input
                             value={this.state.product_name}
                             onChange={this.handleProductName}>
                         </input>
                     </label>
                     <label>
-                        Description:
+                        Description--->
                         <input
                             value={this.state.description}
                             onChange={this.handleDescription}>
                         </input>
                     </label>
                     <label>
-                        Price:
+                        Price--->
                         <input
                             value={this.state.price}
                             onChange={this.handlePrice}>
                         </input>
                     </label>
                     <label>
-                        Image_Url:
+                        Image_Url--->
                         <input
                             value={this.state.img_url}
                             onChange={this.handleImage}>
@@ -89,7 +89,7 @@ export default class Admin extends Component {
                     </label>
 
                     <label>
-                        Type:
+                        Type------->
                         <select onChange={this.handleType}>
                             {
                             this.state.types.map(type =>
@@ -102,7 +102,7 @@ export default class Admin extends Component {
                     </label>
 
                     <label>
-                        In Stock:
+                        In Stock----------->
                         <select 
                         onChange={this.handleInStock}  
                         value={this.state.in_stock}>
@@ -111,15 +111,17 @@ export default class Admin extends Component {
                         </select>
                     </label>
                     <label>
-                        Quantity:
+                        Quantity--->
                         <input
                             value={this.state.quantity}
                             onChange={this.handleQuantity}>
                         </input>
                     </label>
+                    <br></br>
                 <button>SUBMIT</button>
                 </form>
-                <button onClick={this.handleClear}>CLEAR</button>
+                <br></br>
+                <button id="clearButton" onClick={this.handleClear}>CLEAR</button>
             </div>
         )
     }
