@@ -48,7 +48,7 @@ export default class Admin extends Component {
             quantity: this.state.quantity
         }
         await insertNewProduct(newGlassItem);
-        // this.props.history.push('/');
+        this.props.history.push('/');
     }
     async componentDidMount() {
         const types = await getTypes();

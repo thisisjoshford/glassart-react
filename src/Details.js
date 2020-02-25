@@ -20,7 +20,6 @@ export default class Details extends Component {
                  <img src={glassItem.img_url}/>
                  <li id="description">{glassItem.description}</li>
                  <li id="price">${glassItem.price}</li>
-                 {console.log(glassItem.in_stock)}
                  <li>Items in Stock: {glassItem.quantity}</li>
                  <Link to={`/admin/edit/${glassItem.product_id}`}>Edit/Delete</Link>
             </div>
