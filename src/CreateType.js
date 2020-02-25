@@ -31,11 +31,12 @@ export default class CreateType extends Component {
                         <legend>ADD AN EVENT</legend>
                         <label>NEW TYPE:</label>
                         <input 
+                        id="typeInput"
                         type="text" 
                         value={this.state.type_name}
                         onChange={this.handleTypeInput}
                         />
-                        <button>SUBMIT</button>
+                        <button id="typeSubmit">SUBMIT</button>
                     </fieldset>
                 </form>
             </div>
