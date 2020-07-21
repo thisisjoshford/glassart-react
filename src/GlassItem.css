@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+img{
+    width: 22vw;
+}
+
+#glassProducts{
+    display: inline-grid;
+    text-align: center;
+    list-style: none;
+    margin-left: 1em;
+}
+
+h2 {
+    font-size: large;
+}
+
+#description{
+    font-size: small;
+}
+
+#price{
+    font-size: large;
+}

@@ -1,0 +1,19 @@
+legend {
+    font-size: 20px;
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+  }
+
+#typeInput{
+      font-size: 20px;
+  }
+
+#typeSubmit {
+      text-align: center;
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+  }
